@@ -4,6 +4,7 @@ import android.app.Application;
 import cn.bingoogolapple.swipebacklayout.BGASwipeBackHelper;
 import com.hjq.image.ImageLoader;
 import com.hjq.toast.ToastUtils;
+import com.hxd.traceabilitysystem.handle.ActivityStackManager;
 
 
 /**

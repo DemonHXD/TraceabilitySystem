@@ -15,7 +15,7 @@ public class L {
     //开关
     public static final boolean DEBUG = true;
     //TAG
-    public static final String TAG = "buybooksystem";
+    public static final String TAG = "traceabilitysystem";
 
     //五个等级：DIWEF
 
