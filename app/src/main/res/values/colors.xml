@@ -35,7 +35,6 @@
     <color name="black5">#0c000000</color>
 
     <!-- 灰色 -->
-    <color name="gray">#808080</color>
     <!-- 红色 -->
     <color name="red">#FF0000</color>
     <!-- 金色 -->
@@ -58,5 +57,5 @@
     <!-- 按钮禁用时的颜色 -->
     <color name="colorButtonDisable">#DDDDDD</color>
 
-    <color name="grey">#EEEEE0</color>
+    <color name="grey">#808080</color>
 </resources>
