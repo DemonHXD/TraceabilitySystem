@@ -9,4 +9,4 @@ package com.hxd.traceabilitysystem.bean
  *  描述:       产商数据集合
  */
 
-data class ManufacturerBean()
+data class ManufacturerBean(val data:String)

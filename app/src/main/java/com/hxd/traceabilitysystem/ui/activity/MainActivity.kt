@@ -12,6 +12,7 @@ import com.yzq.zxinglibrary.android.CaptureActivity
 import com.yzq.zxinglibrary.bean.ZxingConfig
 import com.yzq.zxinglibrary.common.Constant
 import kotlinx.android.synthetic.main.activity_main.*
+import org.jetbrains.anko.startActivity
 
 class MainActivity : MyActivity() {
 
@@ -26,6 +27,9 @@ class MainActivity : MyActivity() {
     }
 
     override fun initView() {
+        /**
+         *  点击扫码
+         */
         iv_saoBtn_home.setOnClickListener {
             XXPermissions.with(getActivity()).permission(Permission.CAMERA, Permission.READ_EXTERNAL_STORAGE).request(object :
                 OnPermission {
@@ -42,7 +46,13 @@ class MainActivity : MyActivity() {
                     L.i("没有权限无法扫描呦")
                 }
             })
+        }
 
+        /**
+         * 打开关于界面
+         */
+        iv_aboutBtn_home.setOnClickListener {
+            startActivity<WebActivity>("url" to "https://github.com/DemonHXD/TraceabilitySystem")
         }
     }
 

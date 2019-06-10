@@ -1,60 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@mipmap/ic_bg_home"
-        tools:context=".ui.activity.MainActivity">
+        android:layout_height="match_parent">
 
-    <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="280dp"
-            android:scaleType="fitXY"
-            android:src="@mipmap/ic_top_home"/>
-
-    <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="45dp"
-            android:src="@mipmap/ic_desc_home"/>
-
-    <ImageView
-            android:id="@+id/iv_saoBtn_home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/ic_sao_home"
-            android:layout_gravity="center"/>
 
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            android:layout_marginTop="20dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@mipmap/ic_bg_home"
+            tools:context=".ui.activity.MainActivity">
 
         <ImageView
-                android:id="@+id/iv_queryBtn_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/ic_query_home"
-                android:layout_weight="1"/>
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_top_home"/>
 
         <ImageView
-                android:id="@+id/iv_aboutBtn_home"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/ic_about_home"
-                android:layout_weight="1"/>
+                android:padding="45dp"
+                android:src="@mipmap/ic_desc_home"/>
 
         <ImageView
-                android:id="@+id/iv_complaintBtn_home"
+                android:id="@+id/iv_saoBtn_home"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/ic_complaint_home"
-                android:layout_weight="1"/>
+                android:src="@mipmap/ic_sao_home"
+                android:layout_gravity="center"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginTop="20dp">
+
+            <ImageView
+                    android:id="@+id/iv_queryBtn_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_query_home"
+                    android:layout_weight="1"/>
+
+            <ImageView
+                    android:id="@+id/iv_aboutBtn_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_about_home"
+                    android:layout_weight="1"/>
+
+            <ImageView
+                    android:id="@+id/iv_complaintBtn_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_complaint_home"
+                    android:layout_weight="1"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>
