@@ -5,18 +5,27 @@ import android.content.Intent
 import com.hjq.permissions.OnPermission
 import com.hjq.permissions.Permission
 import com.hjq.permissions.XXPermissions
+import com.hxd.tabactivityfragment.util.GsonToBean
 import com.hxd.traceabilitysystem.R
 import com.hxd.traceabilitysystem.base.common.MyActivity
+import com.hxd.traceabilitysystem.bean.CommonBean
+import com.hxd.traceabilitysystem.bean.MaterialCompanyBean
+import com.hxd.traceabilitysystem.bean.ProductionProcessBean
+import com.hxd.traceabilitysystem.bean.ProjectBean
 import com.hxd.traceabilitysystem.utils.L
+import com.hxd.traceabilitysystem.utils.ProjectUrl
+import com.kymjs.rxvolley.RxVolley
+import com.kymjs.rxvolley.client.HttpCallback
 import com.yzq.zxinglibrary.android.CaptureActivity
 import com.yzq.zxinglibrary.bean.ZxingConfig
 import com.yzq.zxinglibrary.common.Constant
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
+import org.json.JSONObject
 
 class MainActivity : MyActivity() {
 
-    private val REQUEST_CODE_SCAN:Int = 1111
+    private val REQUEST_CODE_SCAN: Int = 1111
 
     override fun getLayoutId(): Int {
         return R.layout.activity_main
@@ -31,21 +40,23 @@ class MainActivity : MyActivity() {
          *  点击扫码
          */
         iv_saoBtn_home.setOnClickListener {
-            XXPermissions.with(getActivity()).permission(Permission.CAMERA, Permission.READ_EXTERNAL_STORAGE).request(object :
-                OnPermission {
-                //权限获取成功
-                override fun hasPermission(granted: List<String>, isAll: Boolean) {
-                    val intent = Intent(getActivity(), CaptureActivity::class.java)
-                    val config = ZxingConfig()
-                    config.isFullScreenScan = false//是否全屏扫描  默认为true  设为false则只会在扫描框中扫描
-                    intent.putExtra(Constant.INTENT_ZXING_CONFIG, config)
-                    startActivityForResult(intent, REQUEST_CODE_SCAN)
-                }
-                //权限获取失败
-                override fun noPermission(denied: List<String>, quick: Boolean) {
-                    L.i("没有权限无法扫描呦")
-                }
-            })
+            //            XXPermissions.with(getActivity()).permission(Permission.CAMERA, Permission.READ_EXTERNAL_STORAGE).request(object :
+//                OnPermission {
+//                //权限获取成功
+//                override fun hasPermission(granted: List<String>, isAll: Boolean) {
+//                    val intent = Intent(getActivity(), CaptureActivity::class.java)
+//                    val config = ZxingConfig()
+//                    config.isFullScreenScan = false//是否全屏扫描  默认为true  设为false则只会在扫描框中扫描
+//                    intent.putExtra(Constant.INTENT_ZXING_CONFIG, config)
+//                    startActivityForResult(intent, REQUEST_CODE_SCAN)
+//                }
+//                //权限获取失败
+//                override fun noPermission(denied: List<String>, quick: Boolean) {
+//                    L.i("没有权限无法扫描呦")
+//                }
+//            })
+            startActivity<SelectActivity>()
+
         }
 
         /**

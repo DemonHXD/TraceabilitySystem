@@ -2,6 +2,8 @@ package com.hxd.traceabilitysystem.ui.activity
 
 import com.hxd.traceabilitysystem.R
 import com.hxd.traceabilitysystem.base.common.MyActivity
+import kotlinx.android.synthetic.main.activity_select.*
+import org.jetbrains.anko.startActivity
 
 class SelectActivity : MyActivity() {
     override fun getLayoutId(): Int {
@@ -13,7 +15,9 @@ class SelectActivity : MyActivity() {
     }
 
     override fun initView() {
-
+        iv_sourceBtn_select.setOnClickListener {
+            startActivity<SourceActivity>()
+        }
     }
 
     override fun initData() {

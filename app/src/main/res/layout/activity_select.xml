@@ -10,23 +10,26 @@
     <!--标题-->
     <LinearLayout
             android:id="@+id/toptitle"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="87px"
+            android:layout_marginLeft="54dp"
+            android:layout_marginRight="18px"
             android:orientation="horizontal">
+
         <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="87px"
-                android:layout_marginLeft="107px"
-                android:layout_marginRight="18px"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
                 android:src="@mipmap/ic_address_select"/>
 
         <TextView
+                android:id="@+id/tv_title_select"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
                 android:text="永州异蛇酒溯源"
                 android:textColor="@color/white"
-                android:layout_marginTop="89px"
                 android:textSize="29sp"/>
     </LinearLayout>
 
@@ -36,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/toptitle"
-            android:layout_marginTop="26px">
+            android:layout_marginTop="12px">
 
         <ImageView
                 android:layout_width="wrap_content"
@@ -52,25 +55,25 @@
             android:layout_height="wrap_content"
             android:src="@mipmap/ic_manufacturer_select"
             android:layout_below="@+id/topline"
-            android:layout_marginTop="72dp"
+            android:layout_marginTop="100dp"
             android:layout_marginLeft="29dp"/>
 
     <!--产源-->
     <ImageView
-            android:id="@+id/iv_souceBtn_select"
+            android:id="@+id/iv_sourceBtn_select"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/ic_souce_select"
             android:layout_below="@+id/topline"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="72dp"
             android:layout_marginRight="15dp"/>
 
     <!--中间的图标-->
     <ImageView
             android:id="@+id/iv_logo_select"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="320dp"
+            android:layout_height="320dp"
             android:src="@mipmap/ic_logo_select"
             android:layout_centerInParent="true"/>
 
@@ -81,8 +84,8 @@
             android:layout_height="wrap_content"
             android:src="@mipmap/ic_mechanism_select"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="145dp"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginBottom="160dp"
+            android:layout_marginLeft="15dp"/>
 
     <!--物流-->
     <ImageView android:id="@+id/iv_logisticsBtn_select"
@@ -91,7 +94,7 @@
                android:src="@mipmap/ic_logistics_select"
                android:layout_alignParentRight="true"
                android:layout_alignParentBottom="true"
-               android:layout_marginBottom="165dp"
+               android:layout_marginBottom="190dp"
                android:layout_marginRight="15dp"/>
 
 </RelativeLayout>

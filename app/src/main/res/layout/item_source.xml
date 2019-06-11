@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_source_bg"
+            android:orientation="vertical">
+
+        <FrameLayout
+                android:layout_width="300dp"
+                android:layout_height="320dp"
+                android:layout_marginTop="26dp"
+                android:layout_gravity="center"
+                android:gravity="center">
+            <ImageView
+                    android:id="@+id/tv_image_itemSource"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="40dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_top_home"/>
+
+            <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:src="@mipmap/ic_project_image_source"/>
+
+        </FrameLayout>
+
+        <TextView
+                android:id="@+id/tv_title_itemSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="蒸馏酒，纯净水"
+                android:textColor="@color/white"
+                android:textSize="24dp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:layout_margin="10dp"
+                android:background="@mipmap/ic_project_text_source"
+                android:orientation="vertical">
+
+            <!--出产地-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="出产地:"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"/>
+
+                <TextView
+                        android:id="@+id/tv_place_itemSource"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="永州市零陵区及江永县"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"/>
+
+            </LinearLayout>
+
+            <!--出产时间-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="出产时间:"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"/>
+
+                <TextView
+                        android:id="@+id/tv_productionTime_itemSource"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2019年5月份"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"/>
+
+            </LinearLayout>
+
+            <!--作用-->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="材料作用:"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"/>
+
+                <TextView
+                        android:id="@+id/tv_function_itemSource"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="异蛇酒的溶液饮品"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="22sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
