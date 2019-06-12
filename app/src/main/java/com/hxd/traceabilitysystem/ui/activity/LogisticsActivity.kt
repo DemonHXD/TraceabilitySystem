@@ -23,7 +23,8 @@ class LogisticsActivity : MyActivity() {
     }
 
     override fun initData() {
-
     }
+    
+    
 
 }

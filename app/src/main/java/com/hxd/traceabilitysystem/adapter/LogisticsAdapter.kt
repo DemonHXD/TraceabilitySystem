@@ -25,7 +25,7 @@ import com.hxd.traceabilitysystem.utils.DensityUtil
 class LogisticsAdapter(private val data: LogisticsBean, private val context: Context) :
     RecyclerView.Adapter<LogisticsAdapter.LogisticsAdapterHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LogisticsAdapterHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.logistics_recycle_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_logistics, parent, false)
         return LogisticsAdapterHolder(view)
     }
 

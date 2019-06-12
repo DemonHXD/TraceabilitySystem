@@ -28,6 +28,7 @@ data class MaterialCompanyBean(
     val businessRegistrationNumber: String = "",
     val registrationAuthority: String = "",
     val registeredAddress: String = "",
+    val image:String = "",
     val scope: String = "",
     val dateOfApproval: String = ""
 )

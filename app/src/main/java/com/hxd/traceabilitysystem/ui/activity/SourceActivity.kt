@@ -5,7 +5,7 @@ import com.hxd.traceabilitysystem.R
 import com.hxd.traceabilitysystem.adapter.CardSourceItem.CardPagerAdapter
 import com.hxd.traceabilitysystem.adapter.CardSourceItem.ShadowTransformer
 import com.hxd.traceabilitysystem.base.common.MyActivity
-import com.hxd.traceabilitysystem.bean.ProductionProcessBean
+import com.hxd.traceabilitysystem.bean.SourceMaterialBean
 import com.hxd.traceabilitysystem.bean.ProjectBean
 import com.hxd.traceabilitysystem.utils.L
 import com.hxd.traceabilitysystem.utils.ProjectUrl
@@ -46,7 +46,7 @@ class SourceActivity : MyActivity() {
                 successDialog
                 val projectBean = GsonToBean.JsonToBean<ProjectBean>(result)
                 L.i("${projectBean.result.supplierInfo.value}")
-                val data = GsonToBean.JsonToBean<ProductionProcessBean>(projectBean.result.supplierInfo.value)
+                val data = GsonToBean.JsonToBean<SourceMaterialBean>(projectBean.result.supplierInfo.value)
                 data.info.forEach { cardItem->
                     mCardAdapter!!.addCardItem(cardItem)
                 }

@@ -1,7 +1,14 @@
 package com.hxd.traceabilitysystem.ui.activity
 
+import com.hxd.tabactivityfragment.util.GsonToBean
 import com.hxd.traceabilitysystem.R
 import com.hxd.traceabilitysystem.base.common.MyActivity
+import com.hxd.traceabilitysystem.bean.ProductionProcessBean
+import com.hxd.traceabilitysystem.bean.ProjectBean
+import com.hxd.traceabilitysystem.utils.L
+import com.hxd.traceabilitysystem.utils.ProjectUrl
+import com.kymjs.rxvolley.RxVolley
+import com.kymjs.rxvolley.client.HttpCallback
 import kotlinx.android.synthetic.main.activity_select.*
 import org.jetbrains.anko.startActivity
 
@@ -17,6 +24,10 @@ class SelectActivity : MyActivity() {
     override fun initView() {
         iv_sourceBtn_select.setOnClickListener {
             startActivity<SourceActivity>()
+        }
+
+        iv_manufacturerBtn_select.setOnClickListener {
+            startActivity<ProductionProcessActivity>()
         }
     }
 

@@ -12,7 +12,6 @@ package com.hxd.traceabilitysystem.bean
 /**
  * image:物流显示的一个图片
  * title：物流显示的一个标题
- *
  * dataList：一个json数据集，里面包含物流时间和物流信息
  */
 data class LogisticsBean(val image: String, val title: String, val dataList: ArrayList<list>) {

@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_detailed_information.*
 /**
  * 原材料公司详细信息页
  */
+
 class DetailedInformationActivity : MyActivity() {
     override fun getLayoutId(): Int {
         return R.layout.activity_detailed_information

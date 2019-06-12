@@ -2,26 +2,12 @@ package com.hxd.traceabilitysystem.ui.activity
 
 import android.app.Activity
 import android.content.Intent
-import com.hjq.permissions.OnPermission
-import com.hjq.permissions.Permission
-import com.hjq.permissions.XXPermissions
-import com.hxd.tabactivityfragment.util.GsonToBean
 import com.hxd.traceabilitysystem.R
 import com.hxd.traceabilitysystem.base.common.MyActivity
-import com.hxd.traceabilitysystem.bean.CommonBean
-import com.hxd.traceabilitysystem.bean.MaterialCompanyBean
-import com.hxd.traceabilitysystem.bean.ProductionProcessBean
-import com.hxd.traceabilitysystem.bean.ProjectBean
 import com.hxd.traceabilitysystem.utils.L
-import com.hxd.traceabilitysystem.utils.ProjectUrl
-import com.kymjs.rxvolley.RxVolley
-import com.kymjs.rxvolley.client.HttpCallback
-import com.yzq.zxinglibrary.android.CaptureActivity
-import com.yzq.zxinglibrary.bean.ZxingConfig
 import com.yzq.zxinglibrary.common.Constant
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
-import org.json.JSONObject
 
 class MainActivity : MyActivity() {
 

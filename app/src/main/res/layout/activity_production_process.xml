@@ -12,33 +12,37 @@
             android:layout_width="match_parent"
             android:layout_height="290dp"
             android:background="@mipmap/select_bg">
+
         <com.hjq.bar.TitleBar
+                android:id="@+id/tb_title_process"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:barStyle="transparent"
-                app:title="物流溯源信息"
+                app:title="生产流程信息"
                 app:titleSize="20sp"/>
 
         <RelativeLayout
-                android:id="@+id/rl_login_mine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true">
+                android:layout_centerInParent="true"
+                android:gravity="center">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/iv_image_logistics"
+                    android:id="@+id/iv_image_process"
                     android:layout_width="92dp"
                     android:layout_height="92dp"
+                    android:layout_centerInParent="true"
                     android:src="@mipmap/ic_logo_select"/>
 
             <TextView
-                    android:id="@+id/tv_name_logistics"
+                    android:id="@+id/tv_title_process"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="立即登录"
-                    android:layout_below="@id/iv_image_logistics"
+                    android:text="永州特产公司"
+                    android:layout_below="@id/iv_image_process"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="35dp"
+                    android:textSize="22sp"
                     android:textColor="@color/colorPrimary"/>
 
         </RelativeLayout>
@@ -49,9 +53,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:cardCornerRadius="10dp"
-            android:layout_margin="25dp">
+            android:layout_gravity="center"
+            android:layout_margin="15dp">
 
         <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_process"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"/>

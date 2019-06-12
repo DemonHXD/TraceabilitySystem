@@ -1,7 +1,6 @@
 package com.hxd.traceabilitysystem.adapter.CardSourceItem;
 
 
-import android.content.Context;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -9,10 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.bumptech.glide.Glide;
 import com.hjq.image.ImageLoader;
 import com.hxd.traceabilitysystem.R;
-import com.hxd.traceabilitysystem.bean.ProductionProcessBean;
+import com.hxd.traceabilitysystem.bean.SourceMaterialBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +28,7 @@ import java.util.List;
 public class CardPagerAdapter extends PagerAdapter implements HomeCardAdapter {
 
     private List<CardView> mViews;
-    private List<ProductionProcessBean.ProductionProcess> mData;
+    private List<SourceMaterialBean.SourceMaterial> mData;
     private float mBaseElevation;
 
     public CardPagerAdapter() {
@@ -38,7 +36,7 @@ public class CardPagerAdapter extends PagerAdapter implements HomeCardAdapter {
         mViews = new ArrayList<>();
     }
 
-    public void addCardItem(ProductionProcessBean.ProductionProcess item) {
+    public void addCardItem(SourceMaterialBean.SourceMaterial item) {
         mViews.add(null);
         mData.add(item);
     }
@@ -91,15 +89,15 @@ public class CardPagerAdapter extends PagerAdapter implements HomeCardAdapter {
         mViews.set(position, null);
     }
 
-    private void bind(final ProductionProcessBean.ProductionProcess item, View view) {
+    private void bind(final SourceMaterialBean.SourceMaterial item, View view) {
         ImageView image = view.findViewById(R.id.tv_image_itemSource);
         TextView title = view.findViewById(R.id.tv_title_itemSource);
         TextView place = view.findViewById(R.id.tv_place_itemSource);
         TextView productionTime = view.findViewById(R.id.tv_productionTime_itemSource);
         TextView function = view.findViewById(R.id.tv_function_itemSource);
         if (!item.getImage().equals("")) {
-//            ImageLoader.loadImage(image, item.getImage());
-            Glide.with(image.getContext()).load(item.getImage()).into(image);
+            ImageLoader.loadImage(image, item.getImage());
+
         }
         title.setText(item.getName());
         place.setText(item.getPlace());
