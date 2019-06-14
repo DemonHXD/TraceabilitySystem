@@ -1,6 +1,5 @@
 package com.hxd.traceabilitysystem.adapter
 
-import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -8,14 +7,10 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import com.hxd.traceabilitysystem.R
-import android.widget.RelativeLayout
 import com.hxd.tabactivityfragment.util.ThreadUtil
 import com.hxd.traceabilitysystem.bean.ProductionProcessBean
-import com.hxd.traceabilitysystem.utils.DensityUtil
-import com.hxd.traceabilitysystem.utils.L
-import java.lang.Exception
-import java.text.SimpleDateFormat
-import java.util.*
+import com.hxd.traceabilitysystem.utils.ToolsUtil.Companion.stringToDate
+
 
 
 /**
@@ -39,7 +34,6 @@ class ProcessAdapter(private val data: ProductionProcessBean) :
     }
 
     override fun onBindViewHolder(holder: ProcessAdapterHolder, position: Int) {
-//        L.i("ProcessAdapter: ${data.info[position]}")
         ThreadUtil.runOnMainThread(Runnable {
             holder.tv_process.text = data.info[position].title
             holder.tv_time.text = stringToDate(data.info[position].timestamp)
@@ -60,12 +54,6 @@ class ProcessAdapter(private val data: ProductionProcessBean) :
         val tv_process: TextView = view.findViewById(R.id.tv_process_itemProcess)
         val tv_workshop: TextView = view.findViewById(R.id.tv_workshop_itemProcess)
         val iv_bottomArrow: ImageView = view.findViewById(R.id.iv_bottomArrow_process)
-    }
-
-    private fun stringToDate(time: Long): String {
-        val date = Date(time)
-        val sd = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
-        return sd.format(date)
     }
 
 }

@@ -10,10 +10,30 @@ package com.hxd.traceabilitysystem.bean
  */
 
 /**
- * image:物流显示的一个图片
- * title：物流显示的一个标题
+ * image:物品图片
+ * source://承运来源
+ * waybill://运单编号
+ * telephone://官方电话
+ * status://物流状态 boolean
  * dataList：一个json数据集，里面包含物流时间和物流信息
  */
-data class LogisticsBean(val image: String, val title: String, val dataList: ArrayList<list>) {
-    data class list(val time: String, val context: String)
+data class LogisticsBean(
+    val info: Logistics,
+    val operator: String = ""
+) {
+    data class Logistics(
+        val image: String = "",
+        val source: String = "",
+        val waybill: String = "",
+        val telephone: String = "",
+        val status: Boolean = false,
+        val info: List<listData>
+    ) {
+        data class listData(
+            val time: Long = 0,
+            val context: String = ""
+        )
+    }
 }
+
+

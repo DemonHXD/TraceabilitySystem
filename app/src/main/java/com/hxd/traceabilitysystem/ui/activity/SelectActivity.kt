@@ -3,7 +3,7 @@ package com.hxd.traceabilitysystem.ui.activity
 import com.hxd.tabactivityfragment.util.GsonToBean
 import com.hxd.traceabilitysystem.R
 import com.hxd.traceabilitysystem.base.common.MyActivity
-import com.hxd.traceabilitysystem.bean.ProductionProcessBean
+import com.hxd.traceabilitysystem.bean.LogisticsBean
 import com.hxd.traceabilitysystem.bean.ProjectBean
 import com.hxd.traceabilitysystem.utils.L
 import com.hxd.traceabilitysystem.utils.ProjectUrl
@@ -28,6 +28,10 @@ class SelectActivity : MyActivity() {
 
         iv_manufacturerBtn_select.setOnClickListener {
             startActivity<ProductionProcessActivity>()
+        }
+
+        iv_logisticsBtn_select.setOnClickListener {
+            startActivity<LogisticsActivity>()
         }
     }
 
