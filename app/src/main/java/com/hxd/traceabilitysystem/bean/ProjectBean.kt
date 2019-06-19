@@ -13,6 +13,7 @@ data class ProjectBean(val error_code: Int = 0, val result: ProjectResult) {
     data class ProjectResult(
         val alliance: data,
         val initInfo: data,
+        val detectionInfo: data,
         val logisticsInfo: data,
         val producerInfo: data,
         val res: data,
